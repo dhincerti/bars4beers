@@ -8,6 +8,7 @@
     "express": "~4.13.1",
     "lodash": "^4.6.0",
     "method-override": "^2.3.5",
-    "mongoose": "^4.4.5"
+    "mongoose": "^4.4.5",
+    "node-restful": "^0.2.5"
   }
 }

@@ -3,7 +3,7 @@ var app = angular.module('addBarsApp', []);
 app.controller('addBarsController', function($scope) {
   $scope.bars = [];
   $scope.newBar = {
-    barName : '',
+    bar : '',
     adress : '',
     phone : '',
     creationDate : ''
@@ -13,7 +13,7 @@ app.controller('addBarsController', function($scope) {
     $scope.creationDate = Date.now();
     $scope.bars.push($scope.newBar);
     $scope.newBar = {
-      barName : '',
+      bar : '',
       adress : '',
       phone : '',
     };

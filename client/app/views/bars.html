@@ -1,0 +1,50 @@
+<!-- <h1>Bars 4 Beers</h1>
+<div id="registration-bars" data-ng-controller="addBarsController">
+  <h3>Cadastre um novo bar</h3>
+  <form data-ng-Submit="post()">
+    <input required type="text" data-ng-model="newBar.barName"
+      placeholder="Name"
+    />
+    <input type="text" data-ng-model="newBar.adress" placeholder="Adress" />
+    <input type="tel" data-ng-model="newBar.phone" placeholder="(19) 99999-9999" />
+    <input type="submit" value="Cadastrar" />
+  </form>
+
+  <div class="registered-bars">
+    <h3>Bares cadastrados</h3>
+    <table class="trable table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Endereço</th>
+          <th>Telefone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="bar in bars | orderBy: 'creationDate' : true">
+          <td>{{bar.barName}}</td>
+          <td>{{bar.adress}}</td>
+          <td>{{bar.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+<div data-ng-controller="BarsCtrl">
+  <table class="trable table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Endereço</th>
+        <th>Telefone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="bar in bars">
+        <td>{{bar.name}}</td>
+        <td>{{bar.adress}}</td>
+        <td>{{bar.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

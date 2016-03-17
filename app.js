@@ -27,10 +27,10 @@ mongoose.connect('mongodb://localhost/bars4beers');
 mongoose.connection.once('open', function() {
 
   // Load the models
-  app.models = require('./models/models.js');
+  app.models = require('./server/models/models.js');
 
   // Load the routes
-  var routes = require('./routes/routes.js');
+  var routes = require('./server/routes/routes.js');
   _.each(routes, function(controller, route) {
     app.use(route, controller(app, route));
   });

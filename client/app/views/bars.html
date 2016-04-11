@@ -1,5 +1,5 @@
-<!-- <h1>Bars 4 Beers</h1>
-<div id="registration-bars" data-ng-controller="addBarsController">
+<h1>Bares</h1>
+<!-- <div id="registration-bars" data-ng-controller="addBarsController">
   <h3>Cadastre um novo bar</h3>
   <form data-ng-Submit="post()">
     <input required type="text" data-ng-model="newBar.barName"
@@ -31,19 +31,25 @@
   </div>
 </div> -->
 <div data-ng-controller="BarsCtrl">
-  <table class="trable table-striped">
+  <table class="table table-striped">
     <thead>
       <tr>
+        <th>#</th>
         <th>Nome</th>
         <th>Endereço</th>
         <th>Telefone</th>
+        <th>Editar</th>
+        <th>Excluir</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="bar in bars">
+        <td>{{$index}}</td>
         <td>{{bar.name}}</td>
         <td>{{bar.adress}}</td>
         <td>{{bar.phone}}</td>
+        <td><span class="glyphicon glyphicon-edit"></span></td>
+        <td><span class="glyphicon glyphicon-remove"></span></td>
       </tr>
     </tbody>
   </table>

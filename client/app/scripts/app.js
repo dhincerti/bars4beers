@@ -13,10 +13,6 @@ angular.module('clientApp', ['ngRoute', 'restangular']).config(function($routePr
     templateUrl : 'views/main.html',
     controller : 'MainCtrl',
     controllerAs : 'main'
-  }).when('/about', {
-    templateUrl : 'views/about.html',
-    controller : 'AboutCtrl',
-    controllerAs : 'about'
   }).when('/bars', {
     templateUrl : 'views/bars.html',
     controller : 'BarsCtrl',

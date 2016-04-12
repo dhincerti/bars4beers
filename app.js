@@ -24,7 +24,9 @@ app.use(function(req, res, next) {
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/bars4beers');
-mongoose.connection.once('open', function() {
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
 
   // Load the models
   app.models = require('./server/models/models.js');

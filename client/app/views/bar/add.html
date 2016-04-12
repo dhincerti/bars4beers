@@ -1,0 +1,23 @@
+<form role="form">
+  <div class="form-group">
+    <label for="name" class="control-label">Nome</label>
+    <input type="text" ng-model="bar.name" class="form-control" id="adress"
+      placeholder="Digite o nome do bar"
+    />
+  </div>
+  <div class="form-group">
+    <label for="adress" class="control-label">Endereço</label>
+    <input type="text" ng-model="bar.address" class="form-control" id="adress"
+      placeholder="Digite o nome do bar"
+    />
+  </div>
+  <div class="form-group">
+    <label for="phone" class="control-label">Telefone</label>
+    <input type="text" ng-model="bar.phone" class="form-control" id="phone"
+      placeholder="Digite o nome do bar"
+    />
+  </div>
+  <input type="submit" class="btn btn-primary" ng-click="saveBar()"
+    value="Cadastrar"
+  />
+</form>

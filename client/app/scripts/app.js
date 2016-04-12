@@ -13,10 +13,29 @@ angular.module('clientApp', ['ngRoute', 'restangular']).config(function($routePr
     templateUrl : 'views/main.html',
     controller : 'MainCtrl',
     controllerAs : 'main'
-  }).when('/bars', {
+  });
+  
+  // Bars Routes
+  $routeProvider.when('/bars', {
     templateUrl : 'views/bars.html',
     controller : 'BarsCtrl',
-    controllerAs : 'bars'
+    controllerAs : 'bars',
+  }).when('/bar/add', {
+    templateUrl: 'views/bar/add.html',
+    controller: 'BarAddCtrl',
+    controllerAs: 'addBar',
+  }).when('/bar/edit/:id', {
+    templateUrl: 'views/bar/edit.html',
+    controller: 'BarEditCtrl',
+    controllerAs: 'editBar',
+  }).when('/bar/delete/:id', {
+    templateUrl: 'views/bar/delete.html',
+    controller: 'BarDeleteCtrl',
+    controllerAs: 'deleteBar',
+  }).when('/bar/:id', {
+    templateUrl: 'views/bar/view.html',
+    controller: 'BarViewCtrl',
+    controllerAs: 'viewBar',
   }).otherwise({
     redirectTo : '/'
   });

@@ -1,40 +1,11 @@
 <h1>Bares</h1>
-<!-- <div id="registration-bars" data-ng-controller="addBarsController">
-  <h3>Cadastre um novo bar</h3>
-  <form data-ng-Submit="post()">
-    <input required type="text" data-ng-model="newBar.barName"
-      placeholder="Name"
-    />
-    <input type="text" data-ng-model="newBar.adress" placeholder="Adress" />
-    <input type="tel" data-ng-model="newBar.phone" placeholder="(19) 99999-9999" />
-    <input type="submit" value="Cadastrar" />
-  </form>
-
-  <div class="registered-bars">
-    <h3>Bares cadastrados</h3>
-    <table class="trable table-striped">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Endereço</th>
-          <th>Telefone</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="bar in bars | orderBy: 'creationDate' : true">
-          <td>{{bar.barName}}</td>
-          <td>{{bar.adress}}</td>
-          <td>{{bar.phone}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div> -->
+<a class="btn btn-primary" href="/#/bar/add">
+  <span class="glyphicon glyphicon-plus"></span> Novo Bar
+</a>
 <div data-ng-controller="BarsCtrl">
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>#</th>
         <th>Nome</th>
         <th>Endereço</th>
         <th>Telefone</th>
@@ -44,12 +15,21 @@
     </thead>
     <tbody>
       <tr ng-repeat="bar in bars">
-        <td>{{$index}}</td>
-        <td>{{bar.name}}</td>
-        <td>{{bar.adress}}</td>
+        <td>
+          <a ng-href="/#/bar/{{bar._id}}">{{bar.name}}</a>
+        </td>
+        <td>{{bar.address}}</td>
         <td>{{bar.phone}}</td>
-        <td><span class="glyphicon glyphicon-edit"></span></td>
-        <td><span class="glyphicon glyphicon-remove"></span></td>
+        <td>
+          <a ng-href="/#/bar/edit/{{bar._id}}" class="btn btn-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+        </td>
+        <td>
+          <a ng-href="/#/bar/delete/{{bar._id}}" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>

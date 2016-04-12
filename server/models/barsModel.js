@@ -6,7 +6,7 @@ var BarSchema = new mongoose.Schema({
     type : String,
     require : true
   },
-  adress : {
+  address : {
     type : String,
   },
   phone : {

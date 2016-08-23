@@ -1,3 +1,3 @@
 module.exports = {
-    barsModel : require('./barsModel.js')
+    bars : require('./barsModel.js')
 };

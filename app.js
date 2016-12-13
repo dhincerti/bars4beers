@@ -23,7 +23,7 @@ app.use(function(req, res, next) {
 });
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/bars4beers');
+mongoose.connect('mongodb://localhost:27017/bars4beers');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
